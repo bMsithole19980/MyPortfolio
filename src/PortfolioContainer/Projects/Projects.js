@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import "./Project.css";
+import News from '../../assets/Home/NewsApp.png'
+
 
 const projects = [
   {
@@ -17,7 +19,7 @@ const projects = [
     title: "NewsApp",
     description:
       "My Hotel Booking and Management App is a user-friendly digital platform designed to streamline the hotel experience for travelers while improving hotel operations. It allows users to effortlessly browse, book, and personalize their stays, all while prioritizing safety through contactless check-in. The app also offers in-room services, local recommendations, and real-time updates, enhancing the overall guest experience. As a full-stack developer, I took a hands-on approach in crafting this solution, combining intuitive design with advanced technology to transform how guests interact with hotels, making their stays more convenient and memorable.",
-    image: "project1.jpg",
+    image: {News},
     tags: ["React", "NewsApi", "Axios", "Boostrap"],
     demoLink: "https://example.com/demo1",
     repoLink: "https://github.com/bMsithole19980/NewsApp.git",

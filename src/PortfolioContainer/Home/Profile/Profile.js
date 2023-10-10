@@ -57,9 +57,9 @@ export default function Profile() {
                             <a href='https://www.instagram.com/?hl=en'>
                                 <i className='fa fa-instagram-square'></i>
                             </a>
-                            <a href='#'>
+                            {/* <a href='#'>
                                 <i className='fa fa-twitter-square'></i>
-                            </a>
+                            </a> */}
                         </div>
                     </div>
 
