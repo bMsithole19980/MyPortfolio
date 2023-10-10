@@ -17,7 +17,7 @@ export default function Navbar() {
             <header className="App-header">
                 <nav className='navbar'>
                     {/* logo */}
-                    <a href='#home' className='logo'>Dev. </a>
+                    <a href='#home' className='logo'>Bongani. </a>
                     <ul className={`navMenu ${isActive ? 'active' : ''}`}>
                         <li onClick={removeActive}>
                             <a href='#home' className={`navLink`}>Home</a>

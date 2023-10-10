@@ -1,15 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import './Profile.css'
 
 export default function Profile() {
     const [textIndex, setTextIndex]= useState(0);
-    const textOptions=[
+
+    const textOptions = useMemo(() => [
         'React/React Native Dev 👩‍💻',
         'Ethusiastic Dev 📱',
         'Full Stack Developer 🖥🖥',
         'Cross Platform Dev 💻📱',
         'MERN Stack Dev 🌐',
-    ];
+    ], []);
 
     const [displayText, setDisplayText]= useState(textOptions[0]);
     
@@ -18,7 +19,7 @@ export default function Profile() {
             setTextIndex((prevIndex)=> (prevIndex+1) % textOptions.length);
         }, 2000);
         return()=>clearInterval(interval);
-    },[textOptions])
+    },[textOptions.length])
 
     useEffect(()=>{
         const targetText = textOptions[textIndex];
@@ -34,7 +35,7 @@ export default function Profile() {
             }
         }, 50);
         return ()=> clearInterval(typewriterInterval);
-    }, [textIndex])
+    }, [textIndex, textOptions])
 
 
     return (
