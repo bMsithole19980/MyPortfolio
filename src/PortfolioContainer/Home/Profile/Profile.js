@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { TypeAnimation } from 'react-type-animation';
 import './Profile.css'
 
 export default function Profile() {
@@ -19,7 +18,7 @@ export default function Profile() {
             setTextIndex((prevIndex)=> (prevIndex+1) % textOptions.length);
         }, 2000);
         return()=>clearInterval(interval);
-    })
+    },[textOptions])
 
     useEffect(()=>{
         const targetText = textOptions[textIndex];
